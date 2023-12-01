@@ -10,17 +10,29 @@
     <TextView
         android:id="@+id/text_nome"
         android:layout_width="wrap_content"
-        android:gravity="center"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Qual o seu nome?"
         android:textSize="30sp" />
 
     <EditText
+        android:id="@+id/edit_nome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="20sp"
-        android:id="@+id/edit_nome" />
+        android:textSize="20sp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:id="@+id/button_ok" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancelar"
+        android:id="@+id/button_cancelar" />
 
 
 </LinearLayout>

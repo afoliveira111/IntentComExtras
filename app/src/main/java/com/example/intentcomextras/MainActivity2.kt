@@ -1,13 +1,16 @@
 package com.example.intentcomextras
 
+import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
 import com.example.intentcomextras.databinding.ActivityMain2Binding
 
 class MainActivity2 : AppCompatActivity() {
 
     private lateinit var binding: ActivityMain2Binding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,10 +20,17 @@ class MainActivity2 : AppCompatActivity() {
         val i = intent
         val nome = i.extras?.getString("nome")
 
-        if(nome.equals("") || nome == null){
-            Toast.makeText(applicationContext, "Nome não inserido", Toast.LENGTH_SHORT).show()
-        }else{
-            binding.textNome.setText("Olá $nome")
+        binding.editNome.setText(nome)
+
+        binding.buttonOk.setOnClickListener {
+            i.putExtra("nome", binding.editNome.text.toString())
+            setResult(1, i)
+            finish()
         }
+        binding.buttonCancelar.setOnClickListener {
+            setResult(2,i)
+            finish()
+        }
+
     }
 }
