@@ -19,6 +19,8 @@ class MainActivity2 : AppCompatActivity() {
 
         if(nome.equals("") || nome == null){
             Toast.makeText(applicationContext, "Nome não inserido", Toast.LENGTH_SHORT).show()
+        }else{
+            binding.textNome.setText("Olá $nome")
         }
     }
 }

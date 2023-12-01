@@ -4,15 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".MainActivity2">
 
     <TextView
         android:id="@+id/text_nome"
         android:layout_width="wrap_content"
+        android:gravity="center"
         android:layout_height="wrap_content"
-        android:text="Olá"
-        android:textSize="40sp" />
+        android:text="Qual o seu nome?"
+        android:textSize="30sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:id="@+id/edit_nome" />
 
 
 </LinearLayout>
